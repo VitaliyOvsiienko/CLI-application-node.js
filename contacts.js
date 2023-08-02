@@ -10,7 +10,6 @@ async function listContacts() {
     return JSON.parse(data);
   } catch (error) {
     console.error(error);
-    throw new Error('Failed to read contacts file');
   }
 }
 
@@ -21,7 +20,6 @@ async function getContactById(contactId) {
     return result || null;
   } catch (error) {
     console.error(error);
-    throw new Error('Failed to get contact by ID');
   }
 }
 
@@ -37,7 +35,6 @@ async function removeContact(contactId) {
     return result;
   } catch (error) {
     console.error(error);
-    throw new Error('Failed to remove contact');
   }
 }
 
@@ -55,7 +52,6 @@ async function addContact(name, email, phone) {
     return newContact;
   } catch (error) {
     console.error(error);
-    throw new Error('Failed to add new contact');
   }
 }
 
